@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate Verification</title>
+    <link rel="stylesheet" href="css/verify.css">
+    <link rel="icon" type="image/x-icon" href="img/icon.png">
+</head>
+<body>
+    <div class="container">
+        <h1>Verify certificate</h1>
+        <p class="hint">Paste the certificate ID (for example <code>UDEMY…</code> or <code>LINK…</code>), or open the verification link / QR code from the screen after you generate a certificate (with the server running).</p>
+        <input type="text" id="verifyId" placeholder="Certificate ID" autocomplete="off">
+        <button type="button" id="verifyBtn">Verify</button>
+        <div id="status"></div>
+        <a class="back-link" href="index.html">← Back to home</a>
+    </div>
+    <script src="js/api-base.js"></script>
+    <script src="js/inline-verify.js"></script>
+    <script src="js/verify.js"></script>
+    <script>
+        function runVerify() {
+            verifyCertificate();
+        }
+        document.getElementById("verifyBtn").addEventListener("click", runVerify);
+        document.getElementById("verifyId").addEventListener("keydown", function (e) {
+            if (e.key === "Enter") {
+                e.preventDefault();
+                runVerify();
+            }
+        });
+    </script>
+</body>
+</html>

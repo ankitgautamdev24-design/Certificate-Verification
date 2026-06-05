@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>Udemy Digital Certificate Verification</title>
+
+<link rel="stylesheet" href="css/udemy.css" />
+<link rel="stylesheet" href="css/cert-extras.css" />
+<link rel="icon" type="image/x-icon" href="img/udemy.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet"/>
+
+<link href="//db.onlinewebfonts.com/c/7db56b18988b0db9d84b3bfd3d4f9b6b?family=DistrictProW01-Medium" rel="stylesheet" type="text/css"/>
+<link href="//db.onlinewebfonts.com/c/ceae0b0ba6ed654c11bebaa577938012?family=Arno+Pro+Display" rel="stylesheet" type="text/css"/>
+
+</head>
+
+<body class="page-udemy">
+
+<div class="container">
+
+<form id="form" novalidate onsubmit="return false;">
+
+<div class="first-name">
+<label for="fname">
+First Name: <br />
+<input type="text" name="fname" id="fname" required />
+</label>
+</div>
+
+<div class="last-name">
+<label for="lname">
+Last Name: <br />
+<input type="text" name="lname" id="lname" required />
+</label>
+</div>
+
+<div class="date">
+<label for="date">
+Date of Completion: <br />
+<input type="text" name="date" id="date" placeholder="Example: Jan 25, 2026" required />
+</label>
+</div>
+
+<div class="length">
+<label for="length">
+Length of Course: <br />
+<input type="text" name="length" id="length" placeholder="Example: 1 hour 30 minutes" required />
+</label>
+</div>
+
+<div class="course">
+<label class="course-label" for="course">Course Name:</label>
+<select name="course" id="course" required>
+<option value="">Select Course</option>
+<option value="Web Development">Web Development</option>
+<option value="Data Analysis">Data Analysis</option>
+<option value="Data Science">Data Science</option>
+<option value="DSA">DSA</option>
+<option value="Machine Learning">Machine Learning</option>
+<option value="Artificial Intelligence">Artificial Intelligence</option>
+<option value="Cloud Computing">Cloud Computing</option>
+<option value="Cyber Security">Cyber Security</option>
+<option value="Python Programming">Python Programming</option>
+<option value="Java Full Stack">Java Full Stack</option>
+<option value="UI/UX Design">UI/UX Design</option>
+<option value="other">Other</option>
+</select>
+<input type="text" id="customCourse" style="display:none;" />
+</div>
+
+<div class="teacher">
+<label for="teacher">
+Instructor's Name: <br />
+<input type="text" name="teacher" id="teacher" required />
+</label>
+</div>
+
+<div class="btn">
+<button id="Generate" type="button">Generate</button></div>
+
+</form>
+
+<div id="certificate"></div>
+
+<div id="verifyPanel" class="verify-panel verify-panel--minimal" style="display: none;">
+  <div class="verify-panel-primary">
+    <button type="button" id="toggleVerifySection" class="verify-panel-toggle" aria-expanded="false">Verify</button>
+  </div>
+  <div id="verifyInlineSection" class="verify-inline-section" style="display: none;" hidden>
+    <label class="verify-label" for="verifyInlineIdInput">Certificate ID</label>
+    <div class="verify-inline-row">
+      <input type="text" id="verifyInlineIdInput" placeholder="e.g. UDEMY… or LINK…" autocomplete="off">
+    </div>
+    <button type="button" id="verifyInlineSubmit" class="verify-inline-submit">Check certificate</button>
+    <div id="verifyInlineResult" class="verify-inline-result"></div>
+  </div>
+</div>
+
+<div class="cert-actions">
+<button id="download" type="button" style="display:none;">Download PDF</button>
+<button id="newCert" type="button" style="display:none;">Create another certificate</button>
+</div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="js/api-base.js"></script>
+<script src="js/inline-verify.js"></script>
+<script src="js/udemy.js"></script>
+</body>
+</html>

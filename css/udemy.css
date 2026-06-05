@@ -1,0 +1,301 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:#dbdbdbc3;
+  font-family:"Montserrat", sans-serif;
+}
+
+.container{
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+  align-items:center;
+  min-height:100vh;
+  padding:30px;
+  overflow-x:auto;
+}
+
+#form{
+  background:#ffffff;
+  padding:45px;
+  border-radius:14px;
+  box-shadow:0 20px 60px rgba(0,0,0,0.15);
+  font-size:18px;
+  width:430px;
+  max-width:100%;
+}
+
+.first-name,
+.last-name,
+.date,
+.length,
+.course,
+.teacher{
+  margin-top:22px;
+}
+
+label{
+  font-weight:600;
+  color:#333;
+}
+
+.course-label{
+  display:block;
+  margin-bottom:4px;
+}
+
+input,
+textarea,
+select{
+  width:100%;
+  padding:10px;
+  font-size:16px;
+  margin-top:8px;
+  border:none;
+  border-bottom:1px solid #999;
+  outline:none;
+  background:transparent;
+  resize:none;
+}
+
+/* Course selector and custom course input */
+#course{
+  margin-top:0;
+  min-height:44px;
+  line-height:1.4;
+}
+
+#customCourse{
+  margin-top:0;
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+  border-bottom:2px solid #6f42c1;
+}
+
+.btn{
+  margin-top:28px;
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+#Generate,
+#download,
+#newCert,
+#verify{
+  cursor:pointer;
+  border:none;
+  border-radius:8px;
+  padding:14px 24px;
+  min-width:220px;
+  font-size:15px;
+  font-weight:600;
+  color:white;
+  transition:0.3s;
+}
+
+#Generate{
+  background:#6f42c1;
+}
+
+.cert-actions{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:12px;
+  margin-top:18px;
+}
+
+#download{
+  background:#198754;
+  display:none;
+  margin-top:0;
+}
+
+#newCert{
+  background:#6c757d;
+  display:none;
+}
+
+#newCert:hover{
+  background:#5a6268;
+}
+
+#verify{
+  background:#dc3545;
+  display:none;
+  margin-top:12px;
+}
+
+#Generate:hover{
+  background:#59359b;
+}
+
+#download:hover{
+  background:#146c43;
+}
+
+#verify:hover{
+  background:#b02a37;
+}
+
+/* CERTIFICATE */
+
+#certificate{
+  display:none;
+  flex-direction:column;
+  width:1280px;
+  height:720px;
+  max-width:1280px;
+  min-width:1280px;
+  background:#f8f9fb;
+  margin-top:30px;
+  overflow:hidden;
+  border-radius:0;
+  box-shadow:none;
+  padding:60px;
+}
+
+.pdf-mode{
+  width:1280px !important;
+  height:720px !important;
+  max-width:1280px !important;
+  min-width:1280px !important;
+  margin:0 !important;
+  padding:60px !important;
+  overflow:hidden !important;
+  border-radius:0 !important;
+  box-shadow:none !important;
+  transform:none !important;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  flex-wrap:nowrap;
+}
+
+#udemy-logo{
+  height:120px;
+}
+
+.right-side{
+  font-size:14px;
+  font-family:"DistrictProW01-Medium", sans-serif;
+  color:#6b6b6b;
+  text-align:right;
+  line-height:1.8;
+  max-width:520px;
+}
+
+.right-side .c-url{
+  word-break:break-all;
+  font-size:12px;
+  line-height:1.35;
+}
+
+.content{
+  margin-top:70px;
+  font-weight:700;
+}
+
+.content h3{
+  color:#666;
+  letter-spacing:1.5px;
+  font-size:24px;
+  margin-bottom:18px;
+}
+
+#course-name{
+  font-family:"Arno Pro Display","Times New Roman",serif;
+  font-weight:bold;
+  font-size:72px;
+  line-height:1.15;
+  color:#1c1c1c;
+  margin-bottom:18px;
+}
+
+.content h4,
+.user h4{
+  font-family:"DistrictProW01-Medium", sans-serif;
+  font-weight:400;
+  font-size:20px;
+  margin-top:18px;
+  color:#555;
+}
+
+.content h4 b,
+.user h4 b{
+  font-family:"Poppins", sans-serif;
+  font-size:20px;
+  color:#1c1c1c;
+}
+
+.user{
+  margin-top:90px;
+}
+
+.user h1{
+  font-size:42px;
+  font-family:"Poppins", sans-serif;
+  font-weight:700;
+  color:#1c1c1c;
+  margin-bottom:15px;
+}
+
+.user h4{
+  margin:0 0 10px 0;
+}
+
+#qrcode{
+  margin-top:20px;
+  padding:12px;
+  background:white;
+  border-radius:10px;
+  box-shadow:0 10px 20px rgba(0,0,0,0.12);
+}
+
+/* Responsive preview only */
+@media(max-width:1320px){
+  #certificate{
+    transform:scale(0.8);
+    transform-origin:top center;
+    margin-bottom:24px;
+  }
+}
+
+@media(max-width:768px){
+  #certificate{
+    transform:scale(0.45);
+    transform-origin:top center;
+    margin-bottom:24px;
+  }
+
+  #form{
+    padding:25px;
+    font-size:15px;
+  }
+
+  input,
+  textarea{
+    font-size:14px;
+  }
+
+  #Generate,
+  #download,
+  #newCert,
+  #verify{
+    width:100%;
+    min-width:100%;
+  }
+}

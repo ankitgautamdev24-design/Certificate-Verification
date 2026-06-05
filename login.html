@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin login</title>
+  <link rel="stylesheet" href="css/verify.css">
+  <link rel="icon" type="image/x-icon" href="img/icon.png">
+</head>
+<body>
+  <div class="container">
+    <h1>Admin login</h1>
+    <form id="loginForm" onsubmit="return false;">
+      <input type="text" id="username" placeholder="Username" required autocomplete="username">
+      <input type="password" id="password" placeholder="Password" required autocomplete="current-password">
+      <button type="submit" id="loginSubmit">Log in</button>
+    </form>
+    <div id="status"></div>
+    <a class="back-link" href="index.html">← Back to home</a>
+  </div>
+  <script src="js/login.js"></script>
+</body>
+</html>

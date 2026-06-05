@@ -1,0 +1,279 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:#dbdbdbc3;
+  font-family:"Lato", sans-serif;
+}
+
+.container{
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+  align-items:center;
+  min-height:100vh;
+  padding:30px;
+  overflow-x:auto;
+}
+
+#form{
+  background:#fff;
+  padding:45px;
+  border-radius:14px;
+  box-shadow:0 20px 60px rgba(0,0,0,0.15);
+  font-family:"Montserrat", sans-serif;
+  font-size:18px;
+  width:420px;
+  max-width:100%;
+}
+
+.first-name,
+.last-name,
+.date,
+.length,
+.course{
+  margin-top:22px;
+}
+
+label{
+  font-weight:600;
+  color:#333;
+}
+
+input{
+  width:100%;
+  padding:10px 5px;
+  font-size:16px;
+  border:none;
+  border-bottom:1px solid #999;
+  outline:none;
+  background:transparent;
+  margin-top:8px;
+}
+
+input:focus{
+  border-bottom:2px solid #0a66c2;
+}
+
+.btn{
+  margin-top:28px;
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+#Generate,
+#download,
+#newCert,
+#verify{
+  cursor:pointer;
+  border:none;
+  border-radius:8px;
+  font-family:"Montserrat", sans-serif;
+  padding:14px 24px;
+  min-width:220px;
+  font-size:15px;
+  font-weight:600;
+  color:#fff;
+}
+
+#Generate{background:#0a66c2;}
+.cert-actions{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:12px;
+  margin-top:18px;
+  width:100%;
+}
+
+#download{background:#198754;display:none;margin-top:0;}
+#newCert{background:#6c757d;display:none;}
+#newCert:hover{background:#5a6268;}
+#verify{background:#dc3545;display:none;}
+
+#certificate{
+  display:none;
+  width:1180px;
+  height:820px;
+  max-width:1180px;
+  background:#fff;
+  margin-top:30px;
+  overflow:hidden;
+}
+
+.pdf-mode{
+  margin:0 !important;
+  padding:0 !important;
+  width:1180px !important;
+  height:820px !important;
+  max-width:1180px !important;
+  overflow:hidden !important;
+  transform:none !important;
+}
+
+.outer{
+  width:1180px;
+  height:820px;
+  border:20px solid #fff;
+  background:#fff;
+}
+
+.light-br{
+  width:100%;
+  height:100%;
+  border:3px solid rgba(177,177,177,0.75);
+  padding:4px;
+}
+
+.dark-br{
+  width:100%;
+  height:100%;
+  border:15px solid rgba(135,135,135,0.81);
+  padding:8px;
+}
+
+.main-content{
+  display:flex;
+  width:100%;
+  height:100%;
+  border:6px solid rgb(177,177,177);
+}
+
+.left-side{
+  width:25%;
+  height:100%;
+}
+
+.left-side img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.right-content{
+  width:75%;
+  height:100%;
+  padding:80px 55px 35px 35px;
+  color:#737373;
+}
+
+#logo{
+  height:24px;
+  margin-left:9px;
+}
+
+#sign{
+  height:67px;
+}
+
+.congrats,
+.course-name,
+.para,
+.authority,
+.certificate-id{
+  margin-left:35px;
+}
+
+.congrats h2{
+  font-size:24px;
+  font-weight:300;
+  margin-bottom:5px;
+}
+
+.congrats h3{
+  font-size:23px;
+  font-weight:300;
+}
+
+.course-name{
+  margin-top:40px;
+  color:#6e6f6e;
+}
+
+.course-name h1{
+  font-size:38px;
+  line-height:1.2;
+  margin-bottom:10px;
+}
+
+.completion{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  color:#707071;
+  flex-wrap:wrap;
+}
+
+.completion h3{
+  font-size:19px;
+  font-weight:400;
+}
+
+.para h2{
+  margin-top:28px;
+  font-size:17px;
+  font-weight:400;
+  color:#707071;
+  line-height:1.5;
+}
+
+.authority{
+  margin-top:18px;
+  display:flex;
+  align-items:flex-end;
+  gap:18px;
+  color:#707071;
+}
+
+.vl{
+  border-left:2px solid #d0d0d1;
+  height:70px;
+}
+
+.part-1 h3,
+.part-2 h3{
+  margin:0;
+  font-size:16px;
+  font-weight:500;
+}
+
+.certificate-id{
+  margin-top:110px;
+  font-size:14px;
+  font-weight:600;
+  color:#555;
+}
+
+@media(max-width:1200px){
+  #certificate{
+    transform:scale(0.8);
+    transform-origin:top center;
+    margin-bottom:24px;
+  }
+}
+
+@media(max-width:768px){
+  #certificate{
+    transform:scale(0.45);
+    transform-origin:top center;
+    margin-bottom:24px;
+  }
+
+  #form{
+    padding:25px;
+    font-size:15px;
+  }
+
+  #Generate,
+  #download,
+  #newCert,
+  #verify{
+    width:100%;
+    min-width:100%;
+  }
+}

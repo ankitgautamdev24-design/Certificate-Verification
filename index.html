@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Certificate Generator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="img/icon.png">
+</head>
+
+<body>
+    <video id="background-video" autoplay loop muted playsinline>
+        <source src="img/BG.mp4" type="video/mp4">
+    </video>
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>Important!</strong> This site is for learning only. Do not use generated certificates as official credentials.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <div class="container">
+        <div class="enter">
+            <h1>Digital Certificate Verification System</h1>
+            <h3>Choose a platform or verify a certificate</h3>
+           <div class="dropdown">
+<button class="btn dropdown-toggle custom-btn" type="button" id="dropdownMenuLink"
+    data-bs-toggle="dropdown" aria-expanded="false">
+    Generate (admin)
+</button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <li><a class="dropdown-item" href="udemy.html">Udemy</a></li>
+                    <li><a class="dropdown-item" href="linkedin.html">LinkedIn</a></li>
+                </ul>
+            </div>
+            <div class="d-grid gap-2 col-lg-8 mx-auto">
+                <a href="verify.html" class="btn btn-success">Verify certificate</a>
+                <a href="records.html" class="btn btn-info">Certificate records (admin)</a>
+                <a href="login.html" class="btn btn-warning">Admin login</a>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

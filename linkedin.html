@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LinkedIn Certificate Generator</title>
+
+  <link rel="stylesheet" href="/css/">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- FORM -->
+  <form id="form" novalidate onsubmit="return false;">
+    
+    <h2 class="form-title">Generate Certificate</h2>
+
+    <div class="input-group">
+      <label>First Name</label>
+      <input type="text" id="fname">
+    </div>
+
+    <div class="input-group">
+      <label>Last Name</label>
+      <input type="text" id="lname">
+    </div>
+
+    <div class="input-group">
+      <label>Date of Completion</label>
+      <input type="text" id="date" placeholder="Jan 25, 2024">
+    </div>
+
+    <div class="input-group">
+      <label>Course Length</label>
+      <input type="text" id="length" placeholder="5 hours">
+    </div>
+
+    <div class="input-group">
+      <label>Course Name</label>
+      <input type="text" id="course">
+    </div>
+
+    <div class="btn-group">
+      <button id="Generate" class="btn-primary" type="button">Generate</button>
+    </div>
+
+  </form>
+
+  <!-- CERTIFICATE -->
+  <div id="certificate"></div>
+
+  <!-- VERIFY -->
+  <div id="verifyPanel" class="verify-panel" style="display: none;">
+    
+    <button id="toggleVerifySection" class="btn-secondary">Verify Certificate</button>
+
+    <div id="verifyInlineSection" style="display:none;">
+      <input type="text" id="verifyInlineIdInput" placeholder="Enter Certificate ID">
+      <button id="verifyInlineSubmit" class="btn-dark">Check</button>
+      <div id="verifyInlineResult"></div>
+    </div>
+
+  </div>
+
+  <!-- ACTION BUTTONS -->
+  <div class="cert-actions">
+    <button id="download" class="btn-primary" style="display:none;">Download PDF</button>
+    <button id="newCert" class="btn-secondary" style="display:none;">Create another</button>
+  </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="js/api-base.js"></script>
+<script src="js/inline-verify.js"></script>
+<script src="js/linkedin.js"></script>
+
+</body>
+</html>

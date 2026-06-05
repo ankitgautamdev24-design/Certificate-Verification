@@ -1,0 +1,221 @@
+/* Shared: verification panel below certificate preview (not included in PDF). */
+
+.verify-panel {
+  max-width: 1280px;
+  width: 100%;
+  margin-top: 24px;
+  padding: 22px 24px;
+  background: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.verify-panel--minimal {
+  padding: 16px 20px;
+}
+
+.verify-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 8px;
+}
+
+.verify-link-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.verify-link-row input {
+  flex: 1;
+  min-width: 200px;
+  padding: 10px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #f8f9fa;
+}
+
+.verify-link-row button {
+  width: auto;
+  min-width: 88px;
+  padding: 10px 16px;
+  margin: 0;
+  background: #6f42c1;
+  font-size: 14px;
+}
+
+.verify-link-row button:hover {
+  background: #59359b;
+}
+
+.verify-actions {
+  margin-bottom: 16px;
+}
+
+.verify-actions a {
+  display: inline-block;
+  padding: 10px 18px;
+  background: #198754;
+  color: #fff !important;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 0;
+}
+
+.verify-actions a:hover {
+  background: #146c43;
+  color: #fff !important;
+}
+
+#qrWrap {
+  margin-top: 8px;
+}
+
+#qrWrap img {
+  display: block;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 8px;
+  background: #fff;
+}
+
+.page-linkedin .verify-link-row button {
+  background: #0a66c2;
+}
+
+.page-linkedin .verify-link-row button:hover {
+  background: #084c91;
+}
+
+@media (max-width: 768px) {
+  .verify-link-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .verify-link-row button {
+    width: 100%;
+  }
+}
+
+/* Inline verify (button opens ID + check flow) */
+.verify-panel-primary {
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.verify-panel-toggle {
+  display: inline-block;
+  width: auto;
+  min-width: 220px;
+  padding: 14px 24px;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  background: #198754;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.verify-panel-toggle:hover {
+  background: #146c43;
+}
+
+.verify-inline-section {
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid #e9ecef;
+}
+
+.verify-inline-row input {
+  width: 100%;
+  max-width: 420px;
+  padding: 10px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.verify-inline-submit {
+  display: inline-block;
+  width: 100%;
+  max-width: 280px;
+  margin-top: 12px;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  background: #6f42c1;
+  color: #fff;
+  cursor: pointer;
+}
+
+.verify-inline-submit:hover {
+  background: #59359b;
+}
+
+.verify-inline-result {
+  margin-top: 16px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.verify-panel .valid-box {
+  background: #e9f8ef;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #198754;
+}
+
+.verify-panel .valid-box h3 {
+  color: #198754;
+  margin: 0 0 10px;
+  font-size: 17px;
+}
+
+.verify-panel .invalid-box {
+  background: #fdeaea;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #dc3545;
+}
+
+.verify-panel .invalid-box h3 {
+  color: #dc3545;
+  margin: 0 0 10px;
+  font-size: 17px;
+}
+
+.verify-panel .error-text {
+  color: #dc3545;
+  font-weight: 600;
+}
+
+.page-linkedin .verify-inline-submit {
+  background: #0a66c2;
+}
+
+.page-linkedin .verify-inline-submit:hover {
+  background: #084c91;
+}
+
+@media (max-width: 768px) {
+  .verify-panel-toggle {
+    width: 100%;
+    min-width: 100%;
+  }
+}

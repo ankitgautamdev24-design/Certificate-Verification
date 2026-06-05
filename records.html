@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certificate records</title>
+  <link rel="stylesheet" href="css/verify.css">
+  <link rel="icon" type="image/x-icon" href="img/icon.png">
+</head>
+<body>
+  <div class="container container-wide">
+    <h1>Certificate records</h1>
+    <p class="hint">Certificates appear here when the server is running and you use <strong>Generate</strong> (Udemy / LinkedIn) or add one below. Use the verify link or ID on the <strong>Verify certificate</strong> page.</p>
+
+    <h3>Add certificate</h3>
+    <form id="addForm">
+      <input type="text" id="id" placeholder="Certificate ID" required autocomplete="off">
+      <input type="text" id="name" placeholder="Student name" required autocomplete="name">
+      <input type="text" id="course" placeholder="Course name" required>
+      <input type="date" id="issueDate" required>
+      <input type="text" id="issuer" placeholder="Issuer name" required>
+      <button type="submit" id="addBtn">Add certificate</button>
+    </form>
+
+    <div id="result"></div>
+
+    <hr class="divider">
+
+    <div class="records-toolbar">
+      <h3>All certificates</h3>
+      <button type="button" id="refreshRecords">Refresh list</button>
+    </div>
+    <div id="records"></div>
+
+    <div class="btn-row">
+      <a href="index.html">← Back to home</a>
+      <button type="button" id="logoutBtn" class="btn-secondary">Log out</button>
+    </div>
+  </div>
+
+  <script src="js/api-base.js"></script>
+  <script src="js/records.js"></script>
+  <script>
+    document.getElementById("addForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      addCertificate();
+    });
+    document.getElementById("logoutBtn").addEventListener("click", logout);
+    document.getElementById("refreshRecords").addEventListener("click", loadRecords);
+    loadRecords();
+  </script>
+</body>
+</html>
