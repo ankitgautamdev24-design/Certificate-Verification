@@ -28,6 +28,13 @@ A simple certificate management web app with a static frontend and Express backe
 
 - Node.js installed
 
+## Run the project 
+
+using commands--
+cd certificate-verification
+code .
+
+
 ## Run the backend server
 
 From the project root:
